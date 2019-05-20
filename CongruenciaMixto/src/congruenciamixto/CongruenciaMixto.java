@@ -53,7 +53,7 @@ public class CongruenciaMixto {
         return x;
     }
 
-    //Aqui se ingresa el valor de el multiplicador para elli se deve validar que debe ser un número entero impar
+    //Aqui se ingresa el valor de el multiplicador para ello se debe validar que debe ser un número entero impar
     public static int multiplicador() {
         int a = 0;
         boolean entero = false;
@@ -78,6 +78,7 @@ public class CongruenciaMixto {
         boolean numeroentero = false;
         do {
             try {
+                //Se ingresa el valor de la constante aditiva
                 c = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el valor de c:", null, JOptionPane.INFORMATION_MESSAGE));
                 //Aqui se verifica si el número es un número primo
                 if (c % 2 == 1) {
@@ -95,6 +96,7 @@ public class CongruenciaMixto {
                     }                
 
                 } else {
+                    //condicionamos si el número es entero e impar
                     JOptionPane.showMessageDialog(null, "Debe se entero impar");
                 }
 
@@ -133,8 +135,11 @@ public class CongruenciaMixto {
         double aux1, aux2;
         System.out.println("n\tX\t(ax + c)/m\tXn\tNumeros Uniformes");
         while (r != x2) {
+            //Aplicamos la formula obtenida
             r = (a * x + c) % m;
+            //tomamos este valor para separar los valores
             aux1 = (a * x + c) / m;
+            //obtenemos los datos decimales
             aux2 = r % m;
             System.out.println(i + "\t" + x + "\t" + (int) aux1 + "+" + (int) aux2 + "/" + (int) m + "\t\t" + (int) r + "\t" + (double) r / m);
             x = (int) r;
